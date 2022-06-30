@@ -42,6 +42,10 @@
           </tr>
         </tbody>
       </table>
+      <div *ngIf="!(areUniversitiesLoaded$ | async)" class="d-flex align-items-center" >
+        <strong>Loading...</strong>
+        <div class="spinner-border ms-auto"  role="status" aria-hidden="true"></div>
+      </div>
 
       <div class="d-flex justify-content-between p-2">
         <ngb-pagination
